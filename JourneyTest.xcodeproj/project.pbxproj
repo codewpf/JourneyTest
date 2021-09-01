@@ -44,6 +44,7 @@
 		A59ABC0326DE59E800D57ADA /* AppDelegateEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABC0226DE59E800D57ADA /* AppDelegateEx.swift */; };
 		A59ABC0826DEFBFC00D57ADA /* JTPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABC0726DEFBFC00D57ADA /* JTPostTests.swift */; };
 		A59ABC1526DEFC2100D57ADA /* JTDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABC1426DEFC2100D57ADA /* JTDetailTests.swift */; };
+		A5C4F99626DFAF350065FBCE /* JTDetailHedaerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C4F99526DFAF350065FBCE /* JTDetailHedaerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		A59ABC0226DE59E800D57ADA /* AppDelegateEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateEx.swift; sourceTree = "<group>"; };
 		A59ABC0726DEFBFC00D57ADA /* JTPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTPostTests.swift; sourceTree = "<group>"; };
 		A59ABC1426DEFC2100D57ADA /* JTDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDetailTests.swift; sourceTree = "<group>"; };
+		A5C4F99526DFAF350065FBCE /* JTDetailHedaerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDetailHedaerView.swift; sourceTree = "<group>"; };
 		D3FBEDCAED2E698E19C839A1 /* Pods_JourneyTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JourneyTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E47CEDD07E3288E8DFB409 /* Pods-JourneyTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyTest.release.xcconfig"; path = "Target Support Files/Pods-JourneyTest/Pods-JourneyTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -339,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				A59ABB7626DDF47D00D57ADA /* JTDetailVC.swift */,
+				A5C4F99526DFAF350065FBCE /* JTDetailHedaerView.swift */,
 				A59ABBF926DE58D200D57ADA /* JTDetailCommentCell.swift */,
 			);
 			path = Views;
@@ -526,6 +529,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C4F99626DFAF350065FBCE /* JTDetailHedaerView.swift in Sources */,
 				A59ABBB226DE39CA00D57ADA /* JTViewModelType.swift in Sources */,
 				A59ABB9E26DE392900D57ADA /* JTDataBaseManager.swift in Sources */,
 				A59ABB4C26DDF2B900D57ADA /* JTUtilKeys.swift in Sources */,

@@ -62,8 +62,12 @@ extension JTPostListViewModel: JTViewModelType {
                             .subscribe({ (event) in
                                 switch event {
                                 case .next(let models):
-                                    self?.models.accept(isReloadData ? models : (self?.models.value ?? []) + models)
-                                    output.errorStatus.accept("Network error: \(err.localizedDescription)\nFetch data from local data base")
+                                    if models.count > 0 {
+                                        self?.models.accept(isReloadData ? models : (self?.models.value ?? []) + models)
+                                        output.errorStatus.accept("Network error: \(err.localizedDescription)\n but fetch data from local data base successfully")
+                                    } else {
+                                        output.errorStatus.accept("Network error: \(err.localizedDescription)\nDatabase error: local does not have vlaues")
+                                    }
                                 case .error(let error):
                                     output.errorStatus.accept("Network error: \(err.localizedDescription)\nDatabase error: \(error.localizedDescription)")
                                     print("db err = " + error.localizedDescription)

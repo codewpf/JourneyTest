@@ -43,9 +43,12 @@ struct JTPostModel: Mappable, JTModelResultSetable, CustomStringConvertible  {
         body        <- map["body"]
     }
     
+    init() {
+    }
+    
     var description: String {
         get {
-            return "\(self.uid ) \n\(self.pid)" + self.title + "\n" + self.body + "\n"
+            return "uid=\(self.uid )\npid=\(self.pid)\ntitle=" + self.title + "\nbody=" + self.body + "\n"
         }
     }
 

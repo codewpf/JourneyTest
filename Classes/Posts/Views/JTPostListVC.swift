@@ -11,7 +11,6 @@ import RxCocoa
 import RxDataSources
 import NSObject_Rx
 import SnapKit
-import Kingfisher
 import MJRefresh
 import Then
 
@@ -20,7 +19,7 @@ class JTPostListVC: UIViewController, JTHudViewable {
     /// view controller viewModel
     fileprivate var viewModel: JTPostListViewModel = JTPostListViewModel()
     
-    fileprivate let tableView: UITableView = UITableView(frame: CGRect.zero, style: .grouped).then { (tv) in
+    fileprivate let tableView: UITableView = UITableView(frame: CGRect.zero, style: .plain).then { (tv) in
         tv.backgroundColor = .clear
     }
     fileprivate let dataSource = RxTableViewSectionedReloadDataSource<JTPostListModel>(configureCell: { ds, tv, idx, item in
@@ -64,7 +63,7 @@ extension JTPostListVC {
         self.searchController?.delegate = self
         self.navigationItem.searchController = self.searchController
         
-        self.navigationController?.navigationBar.backgroundColor = .white
+        self.navigationController?.navigationBar.backgroundColor = .systemBackground
 
     }
     
@@ -95,7 +94,7 @@ extension JTPostListVC {
                 }
             }).disposed(by: self.rx.disposeBag)
         
-        self.viewModel.output.errorStatus.asObservable()
+        self.viewModel.output.errorStatus
             .subscribe(onNext: { [weak self] (errStr) in
                 guard errStr.length > 0 else { return }
                 self?.showHUDError(errStr)
@@ -160,6 +159,11 @@ extension JTPostListVC {
 extension JTPostListVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let post = self.dataSource.sectionModels[indexPath.section].items[indexPath.row]
+        let detail = JTDetailVC(post: post)
+        self.navigationController?.pushViewController(detail, animated: true)
+        
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return JTPostListCell.height

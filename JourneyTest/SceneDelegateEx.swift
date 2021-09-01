@@ -50,7 +50,7 @@ extension SceneDelegate {
         }.disposed(by: rx.disposeBag)
         
         
-        print(JTDataBaseManager.manager.dbURL)
+        WPFLog(JTDataBaseManager.manager.dbURL)
 
     }
 
