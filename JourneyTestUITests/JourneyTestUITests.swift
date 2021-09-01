@@ -22,7 +22,7 @@ class JourneyTestUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testPostDetail() throws {
+    func testDetailIsRightWhenTapCellInPostList() throws {
         let app = XCUIApplication()
         app.launch()
         
@@ -42,7 +42,7 @@ class JourneyTestUITests: XCTestCase {
 
     }
     
-    func testDetailSearching() throws {
+    func testCommentIsRightWhenSearchedInDetail() throws {
         let app = XCUIApplication()
         app.launch()
         
@@ -75,7 +75,7 @@ class JourneyTestUITests: XCTestCase {
 
     }
     
-    func testPostSearching() throws {
+    func testDetailIsRightWhenSearchedInPostList() throws {
         let app = XCUIApplication()
         app.launch()
         
