@@ -58,6 +58,12 @@ extension JTPostListVC {
         self.tableView.rx.setDelegate(self).disposed(by: rx.disposeBag)
         self.view.addSubview(self.tableView)
         
+    }
+    
+    func addSearchController() {
+        guard self.navigationItem.searchController == nil else {
+            return
+        }
         self.searchController = UISearchController(searchResultsController: nil)
         self.searchController?.obscuresBackgroundDuringPresentation = false
         self.searchController?.delegate = self
@@ -83,6 +89,7 @@ extension JTPostListVC {
                 case .beginHeaderRefresh:
                     self?.tableView.mj_header?.beginRefreshing()
                 case .endHeaderRefresh:
+                    self?.addSearchController()
                     self?.tableView.mj_header?.endRefreshing()
                     self?.tableView.mj_footer?.endRefreshing()
                 case .beginFooterRefresh:
