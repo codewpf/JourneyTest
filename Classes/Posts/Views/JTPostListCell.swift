@@ -7,17 +7,21 @@
 
 import UIKit
 
-class JTPostListCell: UITableViewCell {
+class JTPostListCell: UITableViewCell, JTReuseIdentifier, JTCellConstant {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    static var height: CGFloat = 90
+    
+    private var _model: JTPostModel?
+    var model: JTPostModel? {
+        willSet(newValue) {
+            guard let value = newValue else {
+                return
+            }
+            self._model = value
+            // todo
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    
 
 }

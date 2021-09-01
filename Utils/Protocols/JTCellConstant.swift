@@ -6,11 +6,9 @@
 //
 
 import Foundation
-
 import UIKit
 
-protocol CTCellConstant {
+protocol JTCellConstant {
     static var height: CGFloat { get }
-
 }
 

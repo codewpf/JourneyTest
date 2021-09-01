@@ -7,7 +7,9 @@
 
 import UIKit
 
-class JTDetailCommentCell: UITableViewCell {
+class JTDetailCommentCell: UITableViewCell, JTReuseIdentifier, JTCellConstant {
+    
+    static var height: CGFloat = 80
 
     override func awakeFromNib() {
         super.awakeFromNib()
