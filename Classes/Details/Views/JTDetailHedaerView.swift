@@ -32,31 +32,39 @@ class JTDetailHedaerView: UIView, JTLayoutable {
         fatalError("init(coder:) has not been implemented")
     }
     
-}
-
-extension JTDetailHedaerView {
-    func setupSubviews() {
-        
-        let size = CGSize(width: UIScreen.screenW-self.margin*2, height: CGFloat(Int.max))
+    
+    override func layoutSubviews() {
+        let insets = self.safeAreaInsets
+        let size = CGSize(width: UIScreen.screenW-self.margin*2-insets.left-insets.right, height: CGFloat(Int.max))
         
         let titleHeight = self.post.title.height(with: size, font: self.title.font)
-        self.title.text = self.post.title
-        self.addSubview(self.title)
-        self.title.snp.makeConstraints {
+        self.title.snp.remakeConstraints {
             $0.top.equalToSuperview().inset(self.margin)
-            $0.left.right.equalToSuperview().inset(self.margin)
+            $0.left.equalToSuperview().inset(self.margin+insets.left)
+            $0.right.equalToSuperview().inset(self.margin+insets.right)
             $0.height.equalTo(titleHeight)
         }
         
         
         let bodyHeight = self.post.body.height(with: size, font: self.body.font)
-        self.body.text = self.post.body
-        self.addSubview(self.body)
-        self.body.snp.makeConstraints {
+        self.body.snp.remakeConstraints {
             $0.bottom.equalToSuperview().inset(self.margin)
-            $0.left.right.equalToSuperview().inset(self.margin)
+            $0.left.right.equalToSuperview().inset(self.margin+insets.left)
+            $0.left.right.equalToSuperview().inset(self.margin+insets.right)
             $0.height.equalTo(bodyHeight)
         }
+
+    }
+}
+
+extension JTDetailHedaerView {
+    func setupSubviews() {
+        
+        self.title.text = self.post.title
+        self.addSubview(self.title)
+        
+        self.body.text = self.post.body
+        self.addSubview(self.body)
 
     }
     
