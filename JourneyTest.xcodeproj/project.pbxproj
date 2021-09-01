@@ -14,13 +14,10 @@
 		A59ABAB826DDEE5600D57ADA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59ABAB626DDEE5600D57ADA /* LaunchScreen.storyboard */; };
 		A59ABACE26DDEE5700D57ADA /* JourneyTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABACD26DDEE5700D57ADA /* JourneyTestUITests.swift */; };
 		A59ABB2F26DDF19B00D57ADA /* JTLayoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB2E26DDF19B00D57ADA /* JTLayoutable.swift */; };
-		A59ABB3726DDF1BC00D57ADA /* JTNavigationBarComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB3626DDF1BC00D57ADA /* JTNavigationBarComponents.swift */; };
 		A59ABB3C26DDF20800D57ADA /* JTHudViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB3B26DDF20800D57ADA /* JTHudViewable.swift */; };
 		A59ABB4126DDF22F00D57ADA /* JTReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB4026DDF22F00D57ADA /* JTReuseIdentifier.swift */; };
 		A59ABB4626DDF28400D57ADA /* JTUITestKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB4526DDF28400D57ADA /* JTUITestKeys.swift */; };
 		A59ABB4726DDF28400D57ADA /* JTUITestKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB4526DDF28400D57ADA /* JTUITestKeys.swift */; };
-		A59ABB4C26DDF2B900D57ADA /* JTUtilKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB4B26DDF2B900D57ADA /* JTUtilKeys.swift */; };
-		A59ABB4D26DDF2B900D57ADA /* JTUtilKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB4B26DDF2B900D57ADA /* JTUtilKeys.swift */; };
 		A59ABB6F26DDF46C00D57ADA /* JTPostListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB6E26DDF46C00D57ADA /* JTPostListVC.swift */; };
 		A59ABB7726DDF47D00D57ADA /* JTDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB7626DDF47D00D57ADA /* JTDetailVC.swift */; };
 		A59ABB7C26DDF49300D57ADA /* JTPostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB7B26DDF49300D57ADA /* JTPostListViewModel.swift */; };
@@ -78,11 +75,9 @@
 		A59ABACD26DDEE5700D57ADA /* JourneyTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyTestUITests.swift; sourceTree = "<group>"; };
 		A59ABACF26DDEE5700D57ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A59ABB2E26DDF19B00D57ADA /* JTLayoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTLayoutable.swift; sourceTree = "<group>"; };
-		A59ABB3626DDF1BC00D57ADA /* JTNavigationBarComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTNavigationBarComponents.swift; sourceTree = "<group>"; };
 		A59ABB3B26DDF20800D57ADA /* JTHudViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTHudViewable.swift; sourceTree = "<group>"; };
 		A59ABB4026DDF22F00D57ADA /* JTReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTReuseIdentifier.swift; sourceTree = "<group>"; };
 		A59ABB4526DDF28400D57ADA /* JTUITestKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JTUITestKeys.swift; path = ../../../../Documents/JTUITestKeys.swift; sourceTree = "<group>"; };
-		A59ABB4B26DDF2B900D57ADA /* JTUtilKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTUtilKeys.swift; sourceTree = "<group>"; };
 		A59ABB6E26DDF46C00D57ADA /* JTPostListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTPostListVC.swift; sourceTree = "<group>"; };
 		A59ABB7626DDF47D00D57ADA /* JTDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDetailVC.swift; sourceTree = "<group>"; };
 		A59ABB7B26DDF49300D57ADA /* JTPostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTPostListViewModel.swift; sourceTree = "<group>"; };
@@ -216,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				A59ABB2D26DDF18200D57ADA /* Singletons */,
-				A59ABB2A26DDF18200D57ADA /* Extensions */,
 				A59ABB2C26DDF18200D57ADA /* Enums */,
 				A59ABB2926DDF18200D57ADA /* Protocols */,
 				A59ABB2B26DDF18200D57ADA /* Structs */,
@@ -228,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				A59ABB2E26DDF19B00D57ADA /* JTLayoutable.swift */,
-				A59ABB3626DDF1BC00D57ADA /* JTNavigationBarComponents.swift */,
 				A59ABB3B26DDF20800D57ADA /* JTHudViewable.swift */,
 				A59ABB4026DDF22F00D57ADA /* JTReuseIdentifier.swift */,
 				A59ABBAC26DE39BC00D57ADA /* JTCellConstant.swift */,
@@ -239,18 +232,10 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		A59ABB2A26DDF18200D57ADA /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		A59ABB2B26DDF18200D57ADA /* Structs */ = {
 			isa = PBXGroup;
 			children = (
 				A59ABB4526DDF28400D57ADA /* JTUITestKeys.swift */,
-				A59ABB4B26DDF2B900D57ADA /* JTUtilKeys.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -532,7 +517,6 @@
 				A5C4F99626DFAF350065FBCE /* JTDetailHedaerView.swift in Sources */,
 				A59ABBB226DE39CA00D57ADA /* JTViewModelType.swift in Sources */,
 				A59ABB9E26DE392900D57ADA /* JTDataBaseManager.swift in Sources */,
-				A59ABB4C26DDF2B900D57ADA /* JTUtilKeys.swift in Sources */,
 				A59ABBA826DE398C00D57ADA /* JTError.swift in Sources */,
 				A59ABB4126DDF22F00D57ADA /* JTReuseIdentifier.swift in Sources */,
 				A59ABBA326DE394800D57ADA /* JTRefreshStatus.swift in Sources */,
@@ -552,7 +536,6 @@
 				A59ABB4626DDF28400D57ADA /* JTUITestKeys.swift in Sources */,
 				A59ABBDA26DE56E800D57ADA /* JTPostModel.swift in Sources */,
 				A59ABB8126DDF4AA00D57ADA /* JTDetailViewModel.swift in Sources */,
-				A59ABB3726DDF1BC00D57ADA /* JTNavigationBarComponents.swift in Sources */,
 				A59ABAAE26DDEE5600D57ADA /* SceneDelegate.swift in Sources */,
 				A59ABB6F26DDF46C00D57ADA /* JTPostListVC.swift in Sources */,
 				A59ABBDF26DE574100D57ADA /* JTCommentListModel.swift in Sources */,
@@ -575,7 +558,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A59ABB4D26DDF2B900D57ADA /* JTUtilKeys.swift in Sources */,
 				A59ABACE26DDEE5700D57ADA /* JourneyTestUITests.swift in Sources */,
 				A59ABB4726DDF28400D57ADA /* JTUITestKeys.swift in Sources */,
 			);

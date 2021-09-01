@@ -14,8 +14,8 @@ extension SceneDelegate {
     
     var root: UIViewController {
         get {
-            let post = JTPostListVC()
-            let nav = UINavigationController(rootViewController: post)
+            let postList = JTPostListVC()
+            let nav = UINavigationController(rootViewController: postList)
             return nav
         }
     }

@@ -22,5 +22,4 @@ enum JTError: Error {
     case strErr(String)
     case unknown
     
-    
 }

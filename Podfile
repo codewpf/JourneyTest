@@ -12,10 +12,8 @@ target 'JourneyTest' do
 	pod 'RxDataSources', '~> 4.0'
 	pod 'Moya/RxSwift'
   
-  pod 'SwiftyJSON'
 	pod 'ObjectMapper'
   
-	pod 'Kingfisher'
 	pod 'SnapKit'
 	pod 'MJRefresh'
 	pod 'SVProgressHUD'
