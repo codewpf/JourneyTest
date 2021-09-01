@@ -27,7 +27,6 @@
 		A59ABB9926DE391B00D57ADA /* JTResponseObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB9826DE391B00D57ADA /* JTResponseObjectMapper.swift */; };
 		A59ABB9E26DE392900D57ADA /* JTDataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB9D26DE392900D57ADA /* JTDataBaseManager.swift */; };
 		A59ABBA326DE394800D57ADA /* JTRefreshStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBA226DE394800D57ADA /* JTRefreshStatus.swift */; };
-		A59ABBA826DE398C00D57ADA /* JTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBA726DE398C00D57ADA /* JTError.swift */; };
 		A59ABBAD26DE39BC00D57ADA /* JTCellConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBAC26DE39BC00D57ADA /* JTCellConstant.swift */; };
 		A59ABBB226DE39CA00D57ADA /* JTViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBB126DE39CA00D57ADA /* JTViewModelType.swift */; };
 		A59ABBB726DE39D600D57ADA /* JTDataBasable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBB626DE39D600D57ADA /* JTDataBasable.swift */; };
@@ -90,7 +89,6 @@
 		A59ABB9826DE391B00D57ADA /* JTResponseObjectMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTResponseObjectMapper.swift; sourceTree = "<group>"; };
 		A59ABB9D26DE392900D57ADA /* JTDataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDataBaseManager.swift; sourceTree = "<group>"; };
 		A59ABBA226DE394800D57ADA /* JTRefreshStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTRefreshStatus.swift; sourceTree = "<group>"; };
-		A59ABBA726DE398C00D57ADA /* JTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTError.swift; sourceTree = "<group>"; };
 		A59ABBAC26DE39BC00D57ADA /* JTCellConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTCellConstant.swift; sourceTree = "<group>"; };
 		A59ABBB126DE39CA00D57ADA /* JTViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTViewModelType.swift; sourceTree = "<group>"; };
 		A59ABBB626DE39D600D57ADA /* JTDataBasable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDataBasable.swift; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				A59ABBA226DE394800D57ADA /* JTRefreshStatus.swift */,
-				A59ABBA726DE398C00D57ADA /* JTError.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -566,7 +563,6 @@
 				A5C4F99626DFAF350065FBCE /* JTDetailHedaerView.swift in Sources */,
 				A59ABBB226DE39CA00D57ADA /* JTViewModelType.swift in Sources */,
 				A59ABB9E26DE392900D57ADA /* JTDataBaseManager.swift in Sources */,
-				A59ABBA826DE398C00D57ADA /* JTError.swift in Sources */,
 				A59ABB4126DDF22F00D57ADA /* JTReuseIdentifier.swift in Sources */,
 				A59ABBA326DE394800D57ADA /* JTRefreshStatus.swift in Sources */,
 				A59ABB2F26DDF19B00D57ADA /* JTLayoutable.swift in Sources */,

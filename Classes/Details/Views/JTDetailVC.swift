@@ -87,7 +87,7 @@ extension JTDetailVC {
         self.searchController = UISearchController(searchResultsController: nil)
         self.searchController?.obscuresBackgroundDuringPresentation = false
         self.searchController?.delegate = self
-        self.searchController?.searchBar.placeholder = "Please input to search detail"
+        self.searchController?.searchBar.placeholder = "Please input to search comment"
         self.navigationItem.searchController = self.searchController
         
         self.navigationController?.navigationBar.backgroundColor = .systemBackground

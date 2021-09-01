@@ -70,16 +70,14 @@ extension JTPostListViewModel: JTViewModelType {
                                     }
                                 case .error(let error):
                                     output.errorStatus.accept("Network error: \(err.localizedDescription)\nDatabase error: \(error.localizedDescription)")
-                                    print("db err = " + error.localizedDescription)
                                 default: break
                                 }
                                 self?.updateRefresStatus(isReloadData)
                             }).disposed(by: self?.rx.disposeBag ?? DisposeBag())
-                        print("network err = " + err.localizedDescription)
+                        
                     case .completed:
                         self?.updateRefresStatus(isReloadData)
                     }
-                    
                     
                 }.disposed(by: self.rx.disposeBag)
         

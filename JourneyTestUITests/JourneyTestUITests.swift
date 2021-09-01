@@ -63,7 +63,7 @@ class JourneyTestUITests: XCTestCase {
 
         /// tap the detail search bar
         let detailNavigationBar = app.navigationBars["Detail"]
-        let detailSearchSearchField = detailNavigationBar.searchFields["Please input to search detail"]
+        let detailSearchSearchField = detailNavigationBar.searchFields["Please input to search comment"]
         detailSearchSearchField.tap()
         
         /// input search text
@@ -133,7 +133,7 @@ class JourneyTestUITests: XCTestCase {
 
         /// tap the detail search bar
         let detailNavigationBar = app.navigationBars["Detail"]
-        let detailSearchSearchField = detailNavigationBar.searchFields["Please input to search detail"]
+        let detailSearchSearchField = detailNavigationBar.searchFields["Please input to search comment"]
         detailSearchSearchField.tap()
         
         /// input search text
