@@ -25,6 +25,9 @@ class JTPostListVC: UIViewController, JTHudViewable {
     fileprivate let dataSource = RxTableViewSectionedReloadDataSource<JTPostListModel>(configureCell: { ds, tv, idx, item in
         let cell = tv.dequeueReusableCell(withIdentifier: JTPostListCell.identifier, for: idx) as! JTPostListCell
         cell.model = item
+        if idx.section == 0 && idx.row == 0 {
+            cell.accessibilityIdentifier = JTUITestKeys.keys.postNormalFirstCell
+        }
         return cell
     })
     
@@ -68,6 +71,7 @@ extension JTPostListVC {
         self.searchController = UISearchController(searchResultsController: nil)
         self.searchController?.obscuresBackgroundDuringPresentation = false
         self.searchController?.delegate = self
+        self.searchController?.searchBar.placeholder = "Please input to search post"
         self.navigationItem.searchController = self.searchController
         
         self.navigationController?.navigationBar.backgroundColor = .systemBackground

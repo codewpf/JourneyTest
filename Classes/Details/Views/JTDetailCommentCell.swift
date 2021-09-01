@@ -16,6 +16,7 @@ class JTDetailCommentCell: UITableViewCell, JTReuseIdentifier, JTCellConstant, J
         $0.textColor = .label
         $0.lineBreakMode = .byClipping
         $0.font = .systemFont(ofSize: 17)
+        $0.accessibilityIdentifier = JTUITestKeys.keys.detailCellNameLabel
     }
     
     private let email: UILabel = UILabel().then {
@@ -28,6 +29,7 @@ class JTDetailCommentCell: UITableViewCell, JTReuseIdentifier, JTCellConstant, J
         $0.textColor = .secondaryLabel
         $0.font = .systemFont(ofSize: 15)
         $0.numberOfLines = 0
+        $0.accessibilityIdentifier = JTUITestKeys.keys.detailCellBodyLabel
     }
     
     private var _model: JTCommentModel?

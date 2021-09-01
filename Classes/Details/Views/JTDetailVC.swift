@@ -28,6 +28,9 @@ class JTDetailVC: UIViewController, JTHudViewable, JTLayoutable {
         let cell = tv.dequeueReusableCell(withIdentifier: JTDetailCommentCell.identifier, for: idx) as! JTDetailCommentCell
         cell.model = item
         cell.selectionStyle = .none
+        if idx.section == 0 && idx.row == 0 {
+            cell.accessibilityIdentifier = JTUITestKeys.keys.detailNormalFirstCell
+        }
         return cell
     }, titleForHeaderInSection: { _, _ in
         return "Comment"
@@ -84,6 +87,7 @@ extension JTDetailVC {
         self.searchController = UISearchController(searchResultsController: nil)
         self.searchController?.obscuresBackgroundDuringPresentation = false
         self.searchController?.delegate = self
+        self.searchController?.searchBar.placeholder = "Please input to search detail"
         self.navigationItem.searchController = self.searchController
         
         self.navigationController?.navigationBar.backgroundColor = .systemBackground
