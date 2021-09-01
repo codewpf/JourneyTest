@@ -6,20 +6,24 @@
 //
 
 import UIKit
-
+import SVProgressHUD
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        
-        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        window?.backgroundColor = .white
-        window?.windowScene = windowScene
-        window?.rootViewController = self.root()
-        window?.makeKeyAndVisible()
                 
+        self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        self.window?.backgroundColor = .white
+        self.window?.windowScene = windowScene
+        self.window?.rootViewController = self.root
+        self.window?.makeKeyAndVisible()
+                
+        SVProgressHUD.setDefaultStyle(.dark)
+        SVProgressHUD.setDefaultMaskType(.clear)
+        SVProgressHUD.setMinimumDismissTimeInterval(1)
+
     }
     
     func sceneDidDisconnect(_ scene: UIScene) {

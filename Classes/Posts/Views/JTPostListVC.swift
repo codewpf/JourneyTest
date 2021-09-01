@@ -1,5 +1,5 @@
 //
-//  JTPostVC.swift
+//  JTPostListVC.swift
 //  JourneyTest
 //
 //  Created by Alex on 31/08/21.
@@ -15,7 +15,7 @@ import Kingfisher
 import MJRefresh
 import Then
 
-class JTPostVC: UIViewController {
+class JTPostListVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class JTPostVC: UIViewController {
     
 }
 
-extension JTPostVC {
+extension JTPostListVC {
     func initUI() {
         self.navigationItem.title = "Posts"
     }

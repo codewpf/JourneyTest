@@ -10,12 +10,12 @@ import UIKit
 
 extension SceneDelegate {
     
-    func root() -> UIViewController {
-        
-        let post = JTPostVC()
-        let nav = UINavigationController(rootViewController: post)
-        return nav
-        
+    var root: UIViewController {
+        get {
+            let post = JTPostListVC()
+            let nav = UINavigationController(rootViewController: post)
+            return nav
+        }
     }
     
 }

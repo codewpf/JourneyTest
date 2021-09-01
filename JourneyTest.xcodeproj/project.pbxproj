@@ -12,7 +12,6 @@
 		A59ABAAE26DDEE5600D57ADA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABAAD26DDEE5600D57ADA /* SceneDelegate.swift */; };
 		A59ABAB526DDEE5600D57ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59ABAB426DDEE5600D57ADA /* Assets.xcassets */; };
 		A59ABAB826DDEE5600D57ADA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A59ABAB626DDEE5600D57ADA /* LaunchScreen.storyboard */; };
-		A59ABAC326DDEE5700D57ADA /* JourneyTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABAC226DDEE5700D57ADA /* JourneyTestTests.swift */; };
 		A59ABACE26DDEE5700D57ADA /* JourneyTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABACD26DDEE5700D57ADA /* JourneyTestUITests.swift */; };
 		A59ABB2F26DDF19B00D57ADA /* JTLayoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB2E26DDF19B00D57ADA /* JTLayoutable.swift */; };
 		A59ABB3726DDF1BC00D57ADA /* JTNavigationBarComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB3626DDF1BC00D57ADA /* JTNavigationBarComponents.swift */; };
@@ -22,9 +21,9 @@
 		A59ABB4726DDF28400D57ADA /* JTUITestKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB4526DDF28400D57ADA /* JTUITestKeys.swift */; };
 		A59ABB4C26DDF2B900D57ADA /* JTUtilKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB4B26DDF2B900D57ADA /* JTUtilKeys.swift */; };
 		A59ABB4D26DDF2B900D57ADA /* JTUtilKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB4B26DDF2B900D57ADA /* JTUtilKeys.swift */; };
-		A59ABB6F26DDF46C00D57ADA /* JTPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB6E26DDF46C00D57ADA /* JTPostVC.swift */; };
+		A59ABB6F26DDF46C00D57ADA /* JTPostListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB6E26DDF46C00D57ADA /* JTPostListVC.swift */; };
 		A59ABB7726DDF47D00D57ADA /* JTDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB7626DDF47D00D57ADA /* JTDetailVC.swift */; };
-		A59ABB7C26DDF49300D57ADA /* JTPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB7B26DDF49300D57ADA /* JTPostViewModel.swift */; };
+		A59ABB7C26DDF49300D57ADA /* JTPostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB7B26DDF49300D57ADA /* JTPostListViewModel.swift */; };
 		A59ABB8126DDF4AA00D57ADA /* JTDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB8026DDF4AA00D57ADA /* JTDetailViewModel.swift */; };
 		A59ABB8926DDFC8800D57ADA /* SceneDelegateEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB8826DDFC8800D57ADA /* SceneDelegateEx.swift */; };
 		A59ABB9126DE38F600D57ADA /* JTNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB9026DE38F600D57ADA /* JTNetworkManager.swift */; };
@@ -36,6 +35,15 @@
 		A59ABBB226DE39CA00D57ADA /* JTViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBB126DE39CA00D57ADA /* JTViewModelType.swift */; };
 		A59ABBB726DE39D600D57ADA /* JTDataBasable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBB626DE39D600D57ADA /* JTDataBasable.swift */; };
 		A59ABBBC26DE39F200D57ADA /* JTModelResultSetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBBB26DE39F200D57ADA /* JTModelResultSetable.swift */; };
+		A59ABBD526DE56DD00D57ADA /* JTPostListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBD426DE56DD00D57ADA /* JTPostListModel.swift */; };
+		A59ABBDA26DE56E800D57ADA /* JTPostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBD926DE56E800D57ADA /* JTPostModel.swift */; };
+		A59ABBDF26DE574100D57ADA /* JTCommentListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBDE26DE574100D57ADA /* JTCommentListModel.swift */; };
+		A59ABBE426DE574B00D57ADA /* JTCommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBE326DE574B00D57ADA /* JTCommentModel.swift */; };
+		A59ABBF126DE58B800D57ADA /* JTPostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBF026DE58B800D57ADA /* JTPostListCell.swift */; };
+		A59ABBFA26DE58D200D57ADA /* JTDetailCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBF926DE58D200D57ADA /* JTDetailCommentCell.swift */; };
+		A59ABC0326DE59E800D57ADA /* AppDelegateEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABC0226DE59E800D57ADA /* AppDelegateEx.swift */; };
+		A59ABC0826DEFBFC00D57ADA /* JTPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABC0726DEFBFC00D57ADA /* JTPostTests.swift */; };
+		A59ABC1526DEFC2100D57ADA /* JTDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABC1426DEFC2100D57ADA /* JTDetailTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +72,6 @@
 		A59ABAB726DDEE5600D57ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A59ABAB926DDEE5600D57ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A59ABABE26DDEE5700D57ADA /* JourneyTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneyTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A59ABAC226DDEE5700D57ADA /* JourneyTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyTestTests.swift; sourceTree = "<group>"; };
 		A59ABAC426DDEE5700D57ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A59ABAC926DDEE5700D57ADA /* JourneyTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JourneyTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59ABACD26DDEE5700D57ADA /* JourneyTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JourneyTestUITests.swift; sourceTree = "<group>"; };
@@ -75,9 +82,9 @@
 		A59ABB4026DDF22F00D57ADA /* JTReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTReuseIdentifier.swift; sourceTree = "<group>"; };
 		A59ABB4526DDF28400D57ADA /* JTUITestKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JTUITestKeys.swift; path = ../../../../Documents/JTUITestKeys.swift; sourceTree = "<group>"; };
 		A59ABB4B26DDF2B900D57ADA /* JTUtilKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTUtilKeys.swift; sourceTree = "<group>"; };
-		A59ABB6E26DDF46C00D57ADA /* JTPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTPostVC.swift; sourceTree = "<group>"; };
+		A59ABB6E26DDF46C00D57ADA /* JTPostListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTPostListVC.swift; sourceTree = "<group>"; };
 		A59ABB7626DDF47D00D57ADA /* JTDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDetailVC.swift; sourceTree = "<group>"; };
-		A59ABB7B26DDF49300D57ADA /* JTPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTPostViewModel.swift; sourceTree = "<group>"; };
+		A59ABB7B26DDF49300D57ADA /* JTPostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTPostListViewModel.swift; sourceTree = "<group>"; };
 		A59ABB8026DDF4AA00D57ADA /* JTDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDetailViewModel.swift; sourceTree = "<group>"; };
 		A59ABB8826DDFC8800D57ADA /* SceneDelegateEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateEx.swift; sourceTree = "<group>"; };
 		A59ABB9026DE38F600D57ADA /* JTNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTNetworkManager.swift; sourceTree = "<group>"; };
@@ -89,6 +96,15 @@
 		A59ABBB126DE39CA00D57ADA /* JTViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTViewModelType.swift; sourceTree = "<group>"; };
 		A59ABBB626DE39D600D57ADA /* JTDataBasable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDataBasable.swift; sourceTree = "<group>"; };
 		A59ABBBB26DE39F200D57ADA /* JTModelResultSetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTModelResultSetable.swift; sourceTree = "<group>"; };
+		A59ABBD426DE56DD00D57ADA /* JTPostListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTPostListModel.swift; sourceTree = "<group>"; };
+		A59ABBD926DE56E800D57ADA /* JTPostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTPostModel.swift; sourceTree = "<group>"; };
+		A59ABBDE26DE574100D57ADA /* JTCommentListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTCommentListModel.swift; sourceTree = "<group>"; };
+		A59ABBE326DE574B00D57ADA /* JTCommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTCommentModel.swift; sourceTree = "<group>"; };
+		A59ABBF026DE58B800D57ADA /* JTPostListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTPostListCell.swift; sourceTree = "<group>"; };
+		A59ABBF926DE58D200D57ADA /* JTDetailCommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDetailCommentCell.swift; sourceTree = "<group>"; };
+		A59ABC0226DE59E800D57ADA /* AppDelegateEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateEx.swift; sourceTree = "<group>"; };
+		A59ABC0726DEFBFC00D57ADA /* JTPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTPostTests.swift; sourceTree = "<group>"; };
+		A59ABC1426DEFC2100D57ADA /* JTDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDetailTests.swift; sourceTree = "<group>"; };
 		D3FBEDCAED2E698E19C839A1 /* Pods_JourneyTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JourneyTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E47CEDD07E3288E8DFB409 /* Pods-JourneyTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyTest.release.xcconfig"; path = "Target Support Files/Pods-JourneyTest/Pods-JourneyTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				A59ABAAB26DDEE5600D57ADA /* AppDelegate.swift */,
+				A59ABC0226DE59E800D57ADA /* AppDelegateEx.swift */,
 				A59ABAAD26DDEE5600D57ADA /* SceneDelegate.swift */,
 				A59ABB8826DDFC8800D57ADA /* SceneDelegateEx.swift */,
 				A59ABAB426DDEE5600D57ADA /* Assets.xcassets */,
@@ -168,7 +185,8 @@
 		A59ABAC126DDEE5700D57ADA /* JourneyTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				A59ABAC226DDEE5700D57ADA /* JourneyTestTests.swift */,
+				A59ABBCB26DE50F500D57ADA /* Post */,
+				A59ABBCD26DE510400D57ADA /* Detail */,
 				A59ABAC426DDEE5700D57ADA /* Info.plist */,
 			);
 			path = JourneyTestTests;
@@ -257,8 +275,9 @@
 		A59ABB6C26DDF43D00D57ADA /* Posts */ = {
 			isa = PBXGroup;
 			children = (
-				A59ABB6E26DDF46C00D57ADA /* JTPostVC.swift */,
-				A59ABB7B26DDF49300D57ADA /* JTPostViewModel.swift */,
+				A59ABBF526DE58BB00D57ADA /* Views */,
+				A59ABB7B26DDF49300D57ADA /* JTPostListViewModel.swift */,
+				A59ABBEC26DE589E00D57ADA /* Models */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -266,10 +285,63 @@
 		A59ABB6D26DDF44E00D57ADA /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				A59ABB7626DDF47D00D57ADA /* JTDetailVC.swift */,
+				A59ABBFE26DE58D600D57ADA /* Views */,
 				A59ABB8026DDF4AA00D57ADA /* JTDetailViewModel.swift */,
+				A59ABBE826DE589700D57ADA /* Models */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		A59ABBCB26DE50F500D57ADA /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				A59ABC0726DEFBFC00D57ADA /* JTPostTests.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		A59ABBCD26DE510400D57ADA /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				A59ABC1426DEFC2100D57ADA /* JTDetailTests.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		A59ABBE826DE589700D57ADA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A59ABBDE26DE574100D57ADA /* JTCommentListModel.swift */,
+				A59ABBE326DE574B00D57ADA /* JTCommentModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A59ABBEC26DE589E00D57ADA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A59ABBD426DE56DD00D57ADA /* JTPostListModel.swift */,
+				A59ABBD926DE56E800D57ADA /* JTPostModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A59ABBF526DE58BB00D57ADA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A59ABB6E26DDF46C00D57ADA /* JTPostListVC.swift */,
+				A59ABBF026DE58B800D57ADA /* JTPostListCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A59ABBFE26DE58D600D57ADA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A59ABB7626DDF47D00D57ADA /* JTDetailVC.swift */,
+				A59ABBF926DE58D200D57ADA /* JTDetailCommentCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BEE2BEED1C311C553397B265 /* Frameworks */ = {
@@ -352,6 +424,7 @@
 					};
 					A59ABABD26DDEE5700D57ADA = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 						TestTargetID = A59ABAA726DDEE5600D57ADA;
 					};
 					A59ABAC826DDEE5700D57ADA = {
@@ -460,21 +533,28 @@
 				A59ABB4126DDF22F00D57ADA /* JTReuseIdentifier.swift in Sources */,
 				A59ABBA326DE394800D57ADA /* JTRefreshStatus.swift in Sources */,
 				A59ABB2F26DDF19B00D57ADA /* JTLayoutable.swift in Sources */,
+				A59ABBF126DE58B800D57ADA /* JTPostListCell.swift in Sources */,
 				A59ABB7726DDF47D00D57ADA /* JTDetailVC.swift in Sources */,
 				A59ABBAD26DE39BC00D57ADA /* JTCellConstant.swift in Sources */,
 				A59ABB9926DE391B00D57ADA /* JTResponseObjectMapper.swift in Sources */,
 				A59ABBB726DE39D600D57ADA /* JTDataBasable.swift in Sources */,
+				A59ABBFA26DE58D200D57ADA /* JTDetailCommentCell.swift in Sources */,
 				A59ABBBC26DE39F200D57ADA /* JTModelResultSetable.swift in Sources */,
+				A59ABC0326DE59E800D57ADA /* AppDelegateEx.swift in Sources */,
 				A59ABB8926DDFC8800D57ADA /* SceneDelegateEx.swift in Sources */,
 				A59ABB3C26DDF20800D57ADA /* JTHudViewable.swift in Sources */,
 				A59ABB9126DE38F600D57ADA /* JTNetworkManager.swift in Sources */,
 				A59ABAAC26DDEE5600D57ADA /* AppDelegate.swift in Sources */,
 				A59ABB4626DDF28400D57ADA /* JTUITestKeys.swift in Sources */,
+				A59ABBDA26DE56E800D57ADA /* JTPostModel.swift in Sources */,
 				A59ABB8126DDF4AA00D57ADA /* JTDetailViewModel.swift in Sources */,
 				A59ABB3726DDF1BC00D57ADA /* JTNavigationBarComponents.swift in Sources */,
 				A59ABAAE26DDEE5600D57ADA /* SceneDelegate.swift in Sources */,
-				A59ABB6F26DDF46C00D57ADA /* JTPostVC.swift in Sources */,
-				A59ABB7C26DDF49300D57ADA /* JTPostViewModel.swift in Sources */,
+				A59ABB6F26DDF46C00D57ADA /* JTPostListVC.swift in Sources */,
+				A59ABBDF26DE574100D57ADA /* JTCommentListModel.swift in Sources */,
+				A59ABBD526DE56DD00D57ADA /* JTPostListModel.swift in Sources */,
+				A59ABB7C26DDF49300D57ADA /* JTPostListViewModel.swift in Sources */,
+				A59ABBE426DE574B00D57ADA /* JTCommentModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +562,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A59ABAC326DDEE5700D57ADA /* JourneyTestTests.swift in Sources */,
+				A59ABC1526DEFC2100D57ADA /* JTDetailTests.swift in Sources */,
+				A59ABC0826DEFBFC00D57ADA /* JTPostTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,6 +765,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JourneyTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
@@ -694,6 +776,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.JourneyTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JourneyTest.app/JourneyTest";
@@ -705,6 +788,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JourneyTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;

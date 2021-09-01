@@ -1,14 +1,13 @@
 //
-//  JourneyTestTests.swift
+//  JTPostTests.swift
 //  JourneyTestTests
 //
-//  Created by Alex on 31/08/21.
+//  Created by Alex on 1/09/21.
 //
 
 import XCTest
-@testable import JourneyTest
 
-class JourneyTestTests: XCTestCase {
+class JTPostTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
