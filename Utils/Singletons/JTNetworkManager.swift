@@ -16,7 +16,7 @@ enum JTNetworkPath: String {
 }
 
 enum JTNetworkService {
-    case getPost(path: JTNetworkPath)
+    case getPost(path: JTNetworkPath, pageIdx: Int)
     case getComment(path: JTNetworkPath, id: String)
 }
 
@@ -25,7 +25,7 @@ extension JTNetworkService: TargetType {
     
     var path: String {
         switch self {
-        case .getPost(let path): return path.rawValue
+        case .getPost(let path, _): return path.rawValue
         case .getComment(let path, _): return path.rawValue
         }
     }
@@ -36,24 +36,23 @@ extension JTNetworkService: TargetType {
     
     var sampleData: Data {
         switch self {
-        case .getPost(_):
+        case .getPost(_, _):
             return """
             [{
-              "postId": 1,
-              "id": 1,
-              "name": "id labore ex et quam laborum",
-              "email": "Eliseo@gardner.biz",
-              "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+            "userId": 1,
+            "id": 1,
+            "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+            "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
             }]
             """.utf8Encoded
         case .getComment(_, _):
             return """
             [{
-              "postId": 1,
-              "id": 1,
-              "name": "id labore ex et quam laborum",
-              "email": "Eliseo@gardner.biz",
-              "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
+            "postId": 1,
+            "id": 1,
+            "name": "id labore ex et quam laborum",
+            "email": "Eliseo@gardner.biz",
+            "body": "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium"
             }]
             """.utf8Encoded
         }
@@ -62,10 +61,10 @@ extension JTNetworkService: TargetType {
     
     var task: Task {
         switch self {
-        case .getPost(_):
-            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+        case let .getPost(_, pageIdx):
+            return .requestParameters(parameters: ["userId": "\(pageIdx)"], encoding: URLEncoding.default)
         case let .getComment(_, id):
-            return .requestParameters(parameters: ["id": "\(id)"], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["postId": "\(id)"], encoding: URLEncoding.default)
         }
     }
     
