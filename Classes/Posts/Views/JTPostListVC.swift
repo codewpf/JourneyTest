@@ -73,14 +73,12 @@ extension JTPostListVC {
         self.viewModel.input = JTPostInput(path: .getPost)
         self.viewModel.output = self.viewModel.transform()
         self.viewModel.output.sections
-            .asDriver()
-            .flatMap(filterResult)
+            .flatMapLatest(filterResult)
             .drive(self.tableView.rx.items(dataSource: self.dataSource))
             .disposed(by: self.rx.disposeBag)
         
         self.viewModel.output.refreshStatus.asObservable()
             .subscribe(onNext: { [weak self] status in
-                print(status)
                 switch(status) {
                 case .none: break
                 case .beginHeaderRefresh:
@@ -101,6 +99,14 @@ extension JTPostListVC {
             .subscribe(onNext: { [weak self] (errStr) in
                 guard errStr.length > 0 else { return }
                 self?.showHUDError(errStr)
+            }).disposed(by: self.rx.disposeBag)
+        
+        self.searchController?.searchBar.rx
+            .cancelButtonClicked
+            .throttle(.seconds(1), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] (_) in
+                self?.searchController?.searchBar.text = ""
+                self?.viewModel.refreshModels()
             }).disposed(by: self.rx.disposeBag)
         
     }
@@ -128,7 +134,7 @@ extension JTPostListVC {
             return Driver.just(data)
         }
         return searchBar.rx.text.orEmpty
-            .flatMap {  query -> Driver<[JTPostListModel]> in
+            .flatMap { query -> Driver<[JTPostListModel]> in
                 if query.isEmpty {
                     return Driver.just(data)
                 } else {
@@ -136,7 +142,7 @@ extension JTPostListVC {
                     for section in data {
                         var sectionItems: [JTPostModel] = []
                         for item in section.items {
-                            if item.allInformation().contains(query) {
+                            if item.allInformation().contains(query.lowercased()) {
                                 sectionItems.append(item)
                             }
                         }
@@ -144,7 +150,7 @@ extension JTPostListVC {
                     }
                     return Driver.just(newData)
                 }
-        }.asDriver(onErrorJustReturn: [])
+            }.asDriver(onErrorJustReturn: [])
     }
 
     
