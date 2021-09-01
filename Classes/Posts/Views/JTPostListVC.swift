@@ -52,6 +52,7 @@ class JTPostListVC: UIViewController, JTHudViewable {
 extension JTPostListVC {
     func initUI() {
         self.navigationItem.title = "Posts"
+        self.view.backgroundColor = .systemBackground
         
         self.tableView.tableFooterView = UIView()
         self.tableView.register(JTPostListCell.self, forCellReuseIdentifier: JTPostListCell.identifier)
