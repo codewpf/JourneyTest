@@ -23,12 +23,7 @@ extension Response {
     
     /// map json to model array
     public func mapArray<T:BaseMappable>(_ type: T.Type) throws -> [T] {
-        guard let json = try mapJSON() as? [String : Any] else {
-            throw MoyaError.jsonMapping(self)
-        }
-
-        //TODO: The key should be change for different json format
-        guard let jsonArr = (json["results"] as? [[String : Any]]) else {
+        guard let jsonArr = try mapJSON() as? [[String : Any]] else {
             throw MoyaError.jsonMapping(self)
         }
         
