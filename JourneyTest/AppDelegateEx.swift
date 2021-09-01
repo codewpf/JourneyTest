@@ -6,14 +6,7 @@
 //
 
 import Foundation
-import SVProgressHUD
 
 extension AppDelegate {
-    
-    func initHUDProgress() {
-        SVProgressHUD.setDefaultStyle(.dark)
-        SVProgressHUD.setDefaultMaskType(.clear)
-        SVProgressHUD.setMinimumDismissTimeInterval(1)
-    }
     
 }

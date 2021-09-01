@@ -17,12 +17,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         self.window?.backgroundColor = .white
         self.window?.windowScene = windowScene
+        
+        self.initHUDProgress()
+        self.initDB()
+        
         self.window?.rootViewController = self.root
         self.window?.makeKeyAndVisible()
-                
-        SVProgressHUD.setDefaultStyle(.dark)
-        SVProgressHUD.setDefaultMaskType(.clear)
-        SVProgressHUD.setMinimumDismissTimeInterval(1)
 
     }
     
