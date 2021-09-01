@@ -64,3 +64,10 @@ extension JTCommentModel: JTDataBasable {
     }
     
 }
+
+extension JTCommentModel {
+    func allInformation() -> String{
+        return self.name + "" + self.email + " " + self.body
+    }
+
+}

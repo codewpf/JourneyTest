@@ -18,6 +18,7 @@ class JTDetailVC: UIViewController, JTHudViewable, JTLayoutable {
     /// view controller viewModel
     fileprivate let viewModel: JTDetailViewModel
     
+    fileprivate var header: JTDetailHedaerView?
     fileprivate let tableView: UITableView = UITableView(frame: CGRect.zero, style: .plain).then { (tv) in
         tv.backgroundColor = .clear
     }
@@ -31,6 +32,9 @@ class JTDetailVC: UIViewController, JTHudViewable, JTLayoutable {
     }, titleForHeaderInSection: { _, _ in
         return "Comment"
     })
+    
+    /// search view controller
+    fileprivate var searchController: UISearchController? = nil
     
     init(post: JTPostModel) {
         self.viewModel = JTDetailViewModel(post: post)
@@ -75,12 +79,22 @@ extension JTDetailVC {
         
         let header = JTDetailHedaerView(post: self.viewModel.post)
         self.tableView.tableHeaderView = header
+        self.header = header
+        
+        self.searchController = UISearchController(searchResultsController: nil)
+        self.searchController?.obscuresBackgroundDuringPresentation = false
+        self.searchController?.delegate = self
+        self.navigationItem.searchController = self.searchController
+        
+        self.navigationController?.navigationBar.backgroundColor = .systemBackground
+
     }
     
     func setupBinding() {
         self.viewModel.input = JTDetailInput(path: .getComment)
         self.viewModel.output = self.viewModel.transform()
         self.viewModel.output.sections
+            .flatMapLatest(filterResult)
             .drive(self.tableView.rx.items(dataSource: self.dataSource))
             .disposed(by: self.rx.disposeBag)
         
@@ -92,8 +106,53 @@ extension JTDetailVC {
                 }
                 self?.showHUDError(errStr)
             }).disposed(by: self.rx.disposeBag)
+        
+        self.searchController?.searchBar.rx
+            .cancelButtonClicked
+            .throttle(.seconds(1), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] (_) in
+                self?.searchController?.searchBar.text = ""
+                self?.viewModel.refreshModels()
+            }).disposed(by: self.rx.disposeBag)
+
     }
     
+    func setupHeader(isNeed: Bool = true) {
+        guard let header = self.header else {
+            return
+        }
+        if isNeed == false {
+            self.tableView.tableHeaderView = nil
+        } else {
+            self.tableView.tableHeaderView = header
+        }
+    }
+    
+    func filterResult(data: [JTCommentListModel]) -> Driver<[JTCommentListModel]> {
+        guard let searchBar = self.searchController?.searchBar else {
+            return Driver.just(data)
+        }
+        return searchBar.rx.text.orEmpty
+            .flatMap { query -> Driver<[JTCommentListModel]> in
+                if query.isEmpty {
+                    return Driver.just(data)
+                } else {
+                    var newData: [JTCommentListModel] = []
+                    for section in data {
+                        var sectionItems: [JTCommentModel] = []
+                        for item in section.items {
+                            if item.allInformation().contains(query.lowercased()) {
+                                sectionItems.append(item)
+                            }
+                        }
+                        newData.append(JTCommentListModel(items: sectionItems))
+                    }
+                    return Driver.just(newData)
+                }
+            }.asDriver(onErrorJustReturn: [])
+    }
+
+
 }
 
 extension JTDetailVC: UITableViewDelegate {
@@ -103,4 +162,14 @@ extension JTDetailVC: UITableViewDelegate {
         return JTDetailCommentCell.height(model)
     }
     
+}
+
+extension JTDetailVC: UISearchControllerDelegate {
+    func willPresentSearchController(_ searchController: UISearchController) {
+        self.setupHeader(isNeed: false)
+    }
+
+    func didDismissSearchController(_ searchController: UISearchController) {
+        self.setupHeader()
+    }
 }

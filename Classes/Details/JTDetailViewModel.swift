@@ -91,6 +91,11 @@ extension JTDetailViewModel: JTViewModelType {
         
     }
     
+    func refreshModels() {
+        self.models.accept(self.models.value)
+    }
+
+    
 }
 
 
