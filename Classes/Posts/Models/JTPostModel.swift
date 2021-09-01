@@ -10,18 +10,18 @@ import ObjectMapper
 import FMDB
 import RxSwift
 
-struct JTPostModel: Mappable, JTModelResultSetable  {
+struct JTPostModel: Mappable, JTModelResultSetable, CustomStringConvertible  {
     
     static let sql = "CREATE TABLE IF NOT EXISTS Post( \n " +
         "id INTEGER PRIMARY KEY, \n " +
         "userid TEXT NOT NULL, \n " +
         "postid TEXT NOT NULL, \n " +
         "title TEXT NOT NULL, \n " +
-        "body TEXT NOT NULL, \n " +
+        "body TEXT NOT NULL \n " +
     "); \n"
 
-    var uid: String = ""
-    var pid: String  = ""
+    var uid: Int = 0
+    var pid: Int  = 0
     var title: String  = ""
     var body: String = ""
 
@@ -30,27 +30,39 @@ struct JTPostModel: Mappable, JTModelResultSetable  {
     }
     
     init(res: FMResultSet) {
-        self.uid = res.string(forColumn: "userid") ?? "User ID"
-        self.pid = res.string(forColumn: "postid") ?? "Post ID"
+        self.uid = Int(res.int(forColumn: "userid"))
+        self.pid = Int(res.int(forColumn: "postid"))
         self.title = res.string(forColumn: "title") ?? "Title"
         self.body = res.string(forColumn: "body") ?? "Body"
     }
     
     mutating func mapping(map: Map) {
-        uid      <- map["userId"]
-        pid          <- map["id"]
+        uid         <- map["userId"]
+        pid         <- map["id"]
         title       <- map["title"]
         body        <- map["body"]
     }
     
+    var description: String {
+        get {
+            return "\(self.uid ) \n\(self.pid)" + self.title + "\n" + self.body + "\n"
+        }
+    }
+
+}
+
+extension JTPostModel {
+    func allInformation() -> String{
+        return self.title + " " + self.body
+    }
 
 }
 
 
 extension JTPostModel: JTDataBasable {
     func insertPost() -> Completable {
-        let sql = "INSERT OR IGNORE INTO Person(userid, postid, title, body) VALUES(?,?,?,?)"
-        let arguments = [self.uid, self.pid, self.title, self.body]
+        let sql = "INSERT OR IGNORE INTO Post(userid, postid, title, body) VALUES(?,?,?,?)"
+        let arguments = ["\(self.uid)", "\(self.pid)", self.title, self.body]
         return self.insertTable(with: sql, arguments: arguments)
     }
     
