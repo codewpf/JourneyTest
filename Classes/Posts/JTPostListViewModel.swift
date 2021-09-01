@@ -89,7 +89,7 @@ extension JTPostListViewModel: JTViewModelType {
     }
     
     fileprivate func updateRefresStatus(_ isReloadData: Bool) {
-        output.refreshStatus.accept(isReloadData ? .endHeaderRefresh : self.pageIdx >= 3 ? .noMoreData : .endFooterRefresh)
+        output.refreshStatus.accept(isReloadData ? .endHeaderRefresh : self.pageIdx >= 10 ? .noMoreData : .endFooterRefresh)
     }
     
     func refreshModels() {
