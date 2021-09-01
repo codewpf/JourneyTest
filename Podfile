@@ -26,6 +26,16 @@ target 'JourneyTest' do
 
 end
 
+target 'JourneyTestTests' do
+  use_frameworks!
+  
+  pod 'ObjectMapper'
+
+  inhibit_all_warnings!
+
+end
+
+
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|

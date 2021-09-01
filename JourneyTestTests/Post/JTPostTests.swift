@@ -6,27 +6,23 @@
 //
 
 import XCTest
+@testable import JourneyTest
+import ObjectMapper
 
 class JTPostTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    func testPostModelMapsData() throws {
+        
+        let jsonDictionary: [String: Any] = ["userId": 3, "id": 22, "title": "asperiores ea ipsam voluptatibus modi minima quia sint", "body": "repellat aliquid praesentium dolorem quo\nsed totam minus non itaque\nnihil labore molestiae sunt dolor eveniet hic recusandae veniam\ntempora et tenetur expedita sunt"]
+        let post = Mapper<JTPostModel>().map(JSON: jsonDictionary)
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        XCTAssertEqual(post?.uid, 3)
+        XCTAssertEqual(post?.pid, 22)
+        XCTAssertEqual(post?.title, "asperiores ea ipsam voluptatibus modi minima quia sint")
+        XCTAssertEqual(post?.body, "repellat aliquid praesentium dolorem quo\nsed totam minus non itaque\nnihil labore molestiae sunt dolor eveniet hic recusandae veniam\ntempora et tenetur expedita sunt")
+        
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    
+    
+    
 }

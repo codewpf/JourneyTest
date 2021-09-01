@@ -6,27 +6,22 @@
 //
 
 import XCTest
+@testable import JourneyTest
+import ObjectMapper
 
 class JTDetailTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    func testCommontModelMapsData() throws {
+        
+        let jsonDictionary: [String: Any] = ["postId": 6, "id": 29, "name": "eum distinctio amet dolor", "email": "Jennings_Pouros@erica.biz", "body": "tempora voluptatem est\nmagnam distinctio autem est dolorem\net ipsa molestiae odit rerum itaque corporis nihil nam\neaque rerum error"]
+        let comment = Mapper<JTCommentModel>().map(JSON: jsonDictionary)
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        XCTAssertEqual(comment?.pid, 6)
+        XCTAssertEqual(comment?.cid, 29)
+        XCTAssertEqual(comment?.name, "eum distinctio amet dolor")
+        XCTAssertEqual(comment?.email, "Jennings_Pouros@erica.biz")
+        XCTAssertEqual(comment?.body, "tempora voluptatem est\nmagnam distinctio autem est dolorem\net ipsa molestiae odit rerum itaque corporis nihil nam\neaque rerum error")
+        
     }
 
 }
