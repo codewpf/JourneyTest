@@ -41,6 +41,10 @@
 		A59ABC0826DEFBFC00D57ADA /* JTPostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABC0726DEFBFC00D57ADA /* JTPostTests.swift */; };
 		A59ABC1526DEFC2100D57ADA /* JTDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABC1426DEFC2100D57ADA /* JTDetailTests.swift */; };
 		A5C4F99626DFAF350065FBCE /* JTDetailHedaerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C4F99526DFAF350065FBCE /* JTDetailHedaerView.swift */; };
+		A5C4FA3A26E17F0E0065FBCE /* JTDataBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C4FA3926E17F0E0065FBCE /* JTDataBaseTests.swift */; };
+		A5C4FA5526E17F8F0065FBCE /* JTDataBasable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBB626DE39D600D57ADA /* JTDataBasable.swift */; };
+		A5C4FA5926E17F930065FBCE /* JTDataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB9D26DE392900D57ADA /* JTDataBaseManager.swift */; };
+		A5C4FA8726E1FB680065FBCE /* JTModelResultSetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBBB26DE39F200D57ADA /* JTModelResultSetable.swift */; };
 		E9523A45B380AB79E3519BD2 /* Pods_JourneyTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ECE062A36B1E66E4CA8EE4 /* Pods_JourneyTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +107,7 @@
 		A59ABC0726DEFBFC00D57ADA /* JTPostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTPostTests.swift; sourceTree = "<group>"; };
 		A59ABC1426DEFC2100D57ADA /* JTDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDetailTests.swift; sourceTree = "<group>"; };
 		A5C4F99526DFAF350065FBCE /* JTDetailHedaerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDetailHedaerView.swift; sourceTree = "<group>"; };
+		A5C4FA3926E17F0E0065FBCE /* JTDataBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDataBaseTests.swift; sourceTree = "<group>"; };
 		A8D707B5A39F445397D4A20B /* Pods-JourneyTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyTestTests.debug.xcconfig"; path = "Target Support Files/Pods-JourneyTestTests/Pods-JourneyTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3FBEDCAED2E698E19C839A1 /* Pods_JourneyTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JourneyTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E47CEDD07E3288E8DFB409 /* Pods-JourneyTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyTest.release.xcconfig"; path = "Target Support Files/Pods-JourneyTest/Pods-JourneyTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +192,7 @@
 		A59ABAC126DDEE5700D57ADA /* JourneyTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				A5C4FA3826E17E310065FBCE /* Common */,
 				A59ABBCB26DE50F500D57ADA /* Post */,
 				A59ABBCD26DE510400D57ADA /* Detail */,
 				A59ABAC426DDEE5700D57ADA /* Info.plist */,
@@ -226,12 +232,12 @@
 		A59ABB2926DDF18200D57ADA /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				A59ABBB626DE39D600D57ADA /* JTDataBasable.swift */,
 				A59ABB2E26DDF19B00D57ADA /* JTLayoutable.swift */,
 				A59ABB3B26DDF20800D57ADA /* JTHudViewable.swift */,
 				A59ABB4026DDF22F00D57ADA /* JTReuseIdentifier.swift */,
 				A59ABBAC26DE39BC00D57ADA /* JTCellConstant.swift */,
 				A59ABBB126DE39CA00D57ADA /* JTViewModelType.swift */,
-				A59ABBB626DE39D600D57ADA /* JTDataBasable.swift */,
 				A59ABBBB26DE39F200D57ADA /* JTModelResultSetable.swift */,
 			);
 			path = Protocols;
@@ -334,6 +340,14 @@
 				A59ABBF926DE58D200D57ADA /* JTDetailCommentCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A5C4FA3826E17E310065FBCE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A5C4FA3926E17F0E0065FBCE /* JTDataBaseTests.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		BEE2BEED1C311C553397B265 /* Frameworks */ = {
@@ -594,8 +608,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5C4FA5526E17F8F0065FBCE /* JTDataBasable.swift in Sources */,
 				A59ABC1526DEFC2100D57ADA /* JTDetailTests.swift in Sources */,
 				A59ABC0826DEFBFC00D57ADA /* JTPostTests.swift in Sources */,
+				A5C4FA8726E1FB680065FBCE /* JTModelResultSetable.swift in Sources */,
+				A5C4FA5926E17F930065FBCE /* JTDataBaseManager.swift in Sources */,
+				A5C4FA3A26E17F0E0065FBCE /* JTDataBaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,6 +817,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LNGV69PYN4;
 				INFOPLIST_FILE = JourneyTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -823,6 +842,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LNGV69PYN4;
 				INFOPLIST_FILE = JourneyTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -843,6 +863,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LNGV69PYN4;
 				INFOPLIST_FILE = JourneyTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -862,6 +883,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LNGV69PYN4;
 				INFOPLIST_FILE = JourneyTestUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

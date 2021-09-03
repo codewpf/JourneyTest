@@ -30,6 +30,9 @@ target 'JourneyTestTests' do
   use_frameworks!
   
   pod 'ObjectMapper'
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  pod 'FMDB'
 
   inhibit_all_warnings!
 
