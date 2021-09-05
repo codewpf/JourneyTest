@@ -13,7 +13,7 @@ import NSObject_Rx
 import SnapKit
 import Then
 
-class JTDetailVC: UIViewController, JTHudViewable, JTLayoutable {
+class JTDetailVC: UIViewController, JTHudViewable, JTLayoutable, JTSearchableVC, JTSearchFilterable {
     
     /// view controller viewModel
     fileprivate let viewModel: JTDetailViewModel
@@ -37,7 +37,7 @@ class JTDetailVC: UIViewController, JTHudViewable, JTLayoutable {
     })
     
     /// search view controller
-    fileprivate var searchController: UISearchController? = nil
+    var searchController: UISearchController? = nil
     
     init(post: JTPostModel) {
         self.viewModel = JTDetailViewModel(post: post)
@@ -98,7 +98,8 @@ extension JTDetailVC {
         self.viewModel.input = JTDetailInput(path: .getComment)
         self.viewModel.output = self.viewModel.transform()
         self.viewModel.output.sections
-            .flatMapLatest(filterResult)
+            .map{JTFilterBridge<JTCommentListModel>(sections: $0, type: JTCommentListModel(items: $0.first?.items ?? []))}
+            .flatMapLatest(filterResultable)
             .drive(self.tableView.rx.items(dataSource: self.dataSource))
             .disposed(by: self.rx.disposeBag)
         
@@ -132,31 +133,6 @@ extension JTDetailVC {
         }
     }
     
-    func filterResult(data: [JTCommentListModel]) -> Driver<[JTCommentListModel]> {
-        guard let searchBar = self.searchController?.searchBar else {
-            return Driver.just(data)
-        }
-        return searchBar.rx.text.orEmpty
-            .flatMap { query -> Driver<[JTCommentListModel]> in
-                if query.isEmpty {
-                    return Driver.just(data)
-                } else {
-                    var newData: [JTCommentListModel] = []
-                    for section in data {
-                        var sectionItems: [JTCommentModel] = []
-                        for item in section.items {
-                            if item.allInformation().contains(query.lowercased()) {
-                                sectionItems.append(item)
-                            }
-                        }
-                        newData.append(JTCommentListModel(items: sectionItems))
-                    }
-                    return Driver.just(newData)
-                }
-            }.asDriver(onErrorJustReturn: [])
-    }
-
-
 }
 
 extension JTDetailVC: UITableViewDelegate {

@@ -14,7 +14,7 @@ import SnapKit
 import MJRefresh
 import Then
 
-class JTPostListVC: UIViewController, JTHudViewable {
+class JTPostListVC: UIViewController, JTHudViewable, JTSearchableVC, JTSearchFilterable {
 
     /// view controller viewModel
     fileprivate var viewModel: JTPostListViewModel = JTPostListViewModel()
@@ -32,7 +32,7 @@ class JTPostListVC: UIViewController, JTHudViewable {
     })
     
     /// search view controller
-    fileprivate var searchController: UISearchController? = nil
+    var searchController: UISearchController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +83,8 @@ extension JTPostListVC {
         self.viewModel.input = JTPostInput(path: .getPost)
         self.viewModel.output = self.viewModel.transform()
         self.viewModel.output.sections
-            .flatMapLatest(filterResult)
+            .map{JTFilterBridge<JTPostListModel>(sections: $0, type: JTPostListModel(items: $0.first?.items ?? []))}
+            .flatMapLatest(filterResultable)
             .drive(self.tableView.rx.items(dataSource: self.dataSource))
             .disposed(by: self.rx.disposeBag)
         
@@ -140,30 +141,6 @@ extension JTPostListVC {
         
     }
     
-    func filterResult(data: [JTPostListModel]) -> Driver<[JTPostListModel]> {
-        guard let searchBar = self.searchController?.searchBar else {
-            return Driver.just(data)
-        }
-        return searchBar.rx.text.orEmpty
-            .flatMap { query -> Driver<[JTPostListModel]> in
-                if query.isEmpty {
-                    return Driver.just(data)
-                } else {
-                    var newData: [JTPostListModel] = []
-                    for section in data {
-                        var sectionItems: [JTPostModel] = []
-                        for item in section.items {
-                            if item.allInformation().contains(query.lowercased()) {
-                                sectionItems.append(item)
-                            }
-                        }
-                        newData.append(JTPostListModel(items: sectionItems))
-                    }
-                    return Driver.just(newData)
-                }
-            }.asDriver(onErrorJustReturn: [])
-    }
-
     
 }
 

@@ -45,6 +45,7 @@
 		A5C4FA5526E17F8F0065FBCE /* JTDataBasable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBB626DE39D600D57ADA /* JTDataBasable.swift */; };
 		A5C4FA5926E17F930065FBCE /* JTDataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB9D26DE392900D57ADA /* JTDataBaseManager.swift */; };
 		A5C4FA8726E1FB680065FBCE /* JTModelResultSetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABBBB26DE39F200D57ADA /* JTModelResultSetable.swift */; };
+		A5C4FA8C26E32C370065FBCE /* JTSearchFilterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C4FA8B26E32C370065FBCE /* JTSearchFilterProtocols.swift */; };
 		E9523A45B380AB79E3519BD2 /* Pods_JourneyTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43ECE062A36B1E66E4CA8EE4 /* Pods_JourneyTestTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 		A59ABC1426DEFC2100D57ADA /* JTDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDetailTests.swift; sourceTree = "<group>"; };
 		A5C4F99526DFAF350065FBCE /* JTDetailHedaerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDetailHedaerView.swift; sourceTree = "<group>"; };
 		A5C4FA3926E17F0E0065FBCE /* JTDataBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDataBaseTests.swift; sourceTree = "<group>"; };
+		A5C4FA8B26E32C370065FBCE /* JTSearchFilterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTSearchFilterProtocols.swift; sourceTree = "<group>"; };
 		A8D707B5A39F445397D4A20B /* Pods-JourneyTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyTestTests.debug.xcconfig"; path = "Target Support Files/Pods-JourneyTestTests/Pods-JourneyTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3FBEDCAED2E698E19C839A1 /* Pods_JourneyTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JourneyTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E47CEDD07E3288E8DFB409 /* Pods-JourneyTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyTest.release.xcconfig"; path = "Target Support Files/Pods-JourneyTest/Pods-JourneyTest.release.xcconfig"; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				A59ABBAC26DE39BC00D57ADA /* JTCellConstant.swift */,
 				A59ABBB126DE39CA00D57ADA /* JTViewModelType.swift */,
 				A59ABBBB26DE39F200D57ADA /* JTModelResultSetable.swift */,
+				A5C4FA8B26E32C370065FBCE /* JTSearchFilterProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -597,6 +600,7 @@
 				A59ABB8126DDF4AA00D57ADA /* JTDetailViewModel.swift in Sources */,
 				A59ABAAE26DDEE5600D57ADA /* SceneDelegate.swift in Sources */,
 				A59ABB6F26DDF46C00D57ADA /* JTPostListVC.swift in Sources */,
+				A5C4FA8C26E32C370065FBCE /* JTSearchFilterProtocols.swift in Sources */,
 				A59ABBDF26DE574100D57ADA /* JTCommentListModel.swift in Sources */,
 				A59ABBD526DE56DD00D57ADA /* JTPostListModel.swift in Sources */,
 				A59ABB7C26DDF49300D57ADA /* JTPostListViewModel.swift in Sources */,
