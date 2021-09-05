@@ -10,7 +10,7 @@ import ObjectMapper
 import FMDB
 import RxSwift
 
-struct JTPostModel: Mappable, JTModelResultSetable, CustomStringConvertible  {
+struct JTPostModel: Mappable, JTModelResultSetable, CustomStringConvertible, JTModelFilterable  {
     
     static let sql = "CREATE TABLE IF NOT EXISTS Post( \n " +
         "id INTEGER PRIMARY KEY, \n " +

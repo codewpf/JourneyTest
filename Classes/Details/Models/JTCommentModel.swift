@@ -10,7 +10,7 @@ import ObjectMapper
 import FMDB
 import RxSwift
 
-struct JTCommentModel: Mappable, JTModelResultSetable  {
+struct JTCommentModel: Mappable, JTModelResultSetable, JTModelFilterable  {
     
     static let sql = "CREATE TABLE IF NOT EXISTS Comment( \n " +
         "id INTEGER PRIMARY KEY, \n " +
