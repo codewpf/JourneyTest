@@ -1,6 +1,6 @@
 # JourneyTest
 
-This is a pure code iOS project for the Journey coding test.
+This is a pure code iOS project based on POP for the Journey coding test.
 
 App features:
 
@@ -18,7 +18,6 @@ Tech stacks:
 * Swift
 * MVVM
 * RxSwift
-* POP
 * Cocoapod
 
 Third Librarys:
