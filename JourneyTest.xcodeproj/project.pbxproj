@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A882F0E069CAF72CDD5A83B /* Pods_JourneyTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3FBEDCAED2E698E19C839A1 /* Pods_JourneyTest.framework */; };
+		A571F52D274EE4B700698794 /* JTUITestKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F52C274EE4B700698794 /* JTUITestKeys.swift */; };
+		A571F52E274EE4B700698794 /* JTUITestKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A571F52C274EE4B700698794 /* JTUITestKeys.swift */; };
 		A59ABAAC26DDEE5600D57ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABAAB26DDEE5600D57ADA /* AppDelegate.swift */; };
 		A59ABAAE26DDEE5600D57ADA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABAAD26DDEE5600D57ADA /* SceneDelegate.swift */; };
 		A59ABAB526DDEE5600D57ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A59ABAB426DDEE5600D57ADA /* Assets.xcassets */; };
@@ -16,8 +18,6 @@
 		A59ABB2F26DDF19B00D57ADA /* JTLayoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB2E26DDF19B00D57ADA /* JTLayoutable.swift */; };
 		A59ABB3C26DDF20800D57ADA /* JTHudViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB3B26DDF20800D57ADA /* JTHudViewable.swift */; };
 		A59ABB4126DDF22F00D57ADA /* JTReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB4026DDF22F00D57ADA /* JTReuseIdentifier.swift */; };
-		A59ABB4626DDF28400D57ADA /* JTUITestKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB4526DDF28400D57ADA /* JTUITestKeys.swift */; };
-		A59ABB4726DDF28400D57ADA /* JTUITestKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB4526DDF28400D57ADA /* JTUITestKeys.swift */; };
 		A59ABB6F26DDF46C00D57ADA /* JTPostListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB6E26DDF46C00D57ADA /* JTPostListVC.swift */; };
 		A59ABB7726DDF47D00D57ADA /* JTDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB7626DDF47D00D57ADA /* JTDetailVC.swift */; };
 		A59ABB7C26DDF49300D57ADA /* JTPostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A59ABB7B26DDF49300D57ADA /* JTPostListViewModel.swift */; };
@@ -70,6 +70,7 @@
 		2445846B7C7575582FF2A9F5 /* Pods-JourneyTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyTestTests.release.xcconfig"; path = "Target Support Files/Pods-JourneyTestTests/Pods-JourneyTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		43ECE062A36B1E66E4CA8EE4 /* Pods_JourneyTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JourneyTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBEF6B0D1E0682AD70BCDB3 /* Pods-JourneyTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JourneyTest.debug.xcconfig"; path = "Target Support Files/Pods-JourneyTest/Pods-JourneyTest.debug.xcconfig"; sourceTree = "<group>"; };
+		A571F52C274EE4B700698794 /* JTUITestKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTUITestKeys.swift; sourceTree = "<group>"; };
 		A59ABAA826DDEE5600D57ADA /* JourneyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JourneyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A59ABAAB26DDEE5600D57ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A59ABAAD26DDEE5600D57ADA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +85,6 @@
 		A59ABB2E26DDF19B00D57ADA /* JTLayoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTLayoutable.swift; sourceTree = "<group>"; };
 		A59ABB3B26DDF20800D57ADA /* JTHudViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTHudViewable.swift; sourceTree = "<group>"; };
 		A59ABB4026DDF22F00D57ADA /* JTReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTReuseIdentifier.swift; sourceTree = "<group>"; };
-		A59ABB4526DDF28400D57ADA /* JTUITestKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JTUITestKeys.swift; path = ../../../../Documents/JTUITestKeys.swift; sourceTree = "<group>"; };
 		A59ABB6E26DDF46C00D57ADA /* JTPostListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTPostListVC.swift; sourceTree = "<group>"; };
 		A59ABB7626DDF47D00D57ADA /* JTDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTDetailVC.swift; sourceTree = "<group>"; };
 		A59ABB7B26DDF49300D57ADA /* JTPostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JTPostListViewModel.swift; sourceTree = "<group>"; };
@@ -249,7 +249,7 @@
 		A59ABB2B26DDF18200D57ADA /* Structs */ = {
 			isa = PBXGroup;
 			children = (
-				A59ABB4526DDF28400D57ADA /* JTUITestKeys.swift */,
+				A571F52C274EE4B700698794 /* JTUITestKeys.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -578,6 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5C4F99626DFAF350065FBCE /* JTDetailHedaerView.swift in Sources */,
+				A571F52D274EE4B700698794 /* JTUITestKeys.swift in Sources */,
 				A59ABBB226DE39CA00D57ADA /* JTViewModelType.swift in Sources */,
 				A59ABB9E26DE392900D57ADA /* JTDataBaseManager.swift in Sources */,
 				A59ABB4126DDF22F00D57ADA /* JTReuseIdentifier.swift in Sources */,
@@ -595,7 +596,6 @@
 				A59ABB3C26DDF20800D57ADA /* JTHudViewable.swift in Sources */,
 				A59ABB9126DE38F600D57ADA /* JTNetworkManager.swift in Sources */,
 				A59ABAAC26DDEE5600D57ADA /* AppDelegate.swift in Sources */,
-				A59ABB4626DDF28400D57ADA /* JTUITestKeys.swift in Sources */,
 				A59ABBDA26DE56E800D57ADA /* JTPostModel.swift in Sources */,
 				A59ABB8126DDF4AA00D57ADA /* JTDetailViewModel.swift in Sources */,
 				A59ABAAE26DDEE5600D57ADA /* SceneDelegate.swift in Sources */,
@@ -626,7 +626,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A59ABACE26DDEE5700D57ADA /* JourneyTestUITests.swift in Sources */,
-				A59ABB4726DDF28400D57ADA /* JTUITestKeys.swift in Sources */,
+				A571F52E274EE4B700698794 /* JTUITestKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
